@@ -156,3 +156,39 @@ chamar a função enviando (alunos, “JavaScript”), precisa mostrar o
 Pedro e qual mais se encaixa nessa skill.
 */
 
+
+const people = [
+    {
+        name: "Lucas",
+        age: 27,
+        skills: ["html", "css", "javascript", "bootstrap", "typescript"]
+    },
+    {
+        name: "Clara",
+        age: 25,
+        skills: ["html", "bootstrap", "typescript"]
+    },
+    {
+        name: "Diogo",
+        age: 26,
+        skills: ["html"]
+    },
+    {
+        name: "Sandra",
+        age: 50,
+        skills: ["javascript", "bootstrap", "typescript"]
+    },
+    {
+        name: "Darlan",
+        age: 30,
+        skills: ["html", "css", "javascript", "bootstrap", "typescript", "ruby", "java", "nodejs"]
+    }
+];
+
+const skill = prompt("Informe a skill que você deseja buscar: ").toLowerCase();
+
+console.log(skills(people, skill));
+
+function skills(array, skill) {
+    return array.filter((value) => value.skills.includes(skill));
+};
